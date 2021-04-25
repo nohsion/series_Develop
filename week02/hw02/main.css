@@ -1,0 +1,57 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.wrap {
+    width: 800px;
+    margin: 15px auto;
+    border: 1px solid black;
+}
+
+.inner {
+    padding: 40px;
+    border: 1px black;
+}
+
+.title {
+    padding: 20px;
+}
+
+hr {
+    margin-bottom: 0;
+    border: none;
+    height: 1px;
+    background-color: black;
+}
+
+.prod-title {
+    margin-bottom: 30px;
+}
+
+.prod-title h1 {
+    float: left;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+.prod-title h4 {
+    padding-top: 20px;
+}
+
+img {
+    width: 500px;
+    height: 650px;
+    object-fit: cover;
+}
+
+.source {
+    font-size: small;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.rateInfo {
+    color: dodgerblue;
+    font-weight: bold;
+}
