@@ -16,8 +16,16 @@ selector = '#old_content > table > tbody > tr'
 title_selector = 'td.title > div > a'
 titles = soup.select(selector)
 
+point_selector = 'td.point'
+points = soup.select(selector)
+
+rank = 0
 for title in titles:
     title_tag = title.select_one(title_selector)
+    point_tag = title.select_one(point_selector)
 
-    if title_tag:
-        print(title_tag.text)
+    if title_tag and point_tag:
+        rank = rank + 1
+        print(format(rank, '02d'), title_tag.text, point_tag.text)
+
+
