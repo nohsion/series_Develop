@@ -34,7 +34,7 @@ res = requests.get(
 
 # 파파고 정보 naver api
 papago_url = 'https://openapi.naver.com/v1/papago/n2mt'
-papago_text = '당신은 참 곱네요'
+papago_text = '난 정말 네가 좋아, 꼬마개구리'
 data = {
     'source': 'ko',
     'target': 'en',

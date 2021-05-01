@@ -17,6 +17,9 @@
     * node.js
     * jest
     * jQuery
+4. PYTHON
+   * requests
+   * beautifulSoup4
     
 # run test
 
