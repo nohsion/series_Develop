@@ -18,49 +18,38 @@ def video_comments(video_id):
     ).execute()
 
     # iterate video response
-    while video_response:
 
-        # extracting required info
-        # from each result object
-        for item in video_response['items']:
+    # extracting required info
+    # from each result object
+    for item in video_response['items']:
 
-            # Extracting comments
-            comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
+        # Extracting comments
+        comment = item['snippet']['topLevelComment']['snippet']['textDisplay']
 
-            # counting number of reply of comment
-            replycount = item['snippet']['totalReplyCount']
+        # counting number of reply of comment
+        replycount = item['snippet']['totalReplyCount']
 
-            # if reply is there
-            if replycount > 0:
+        # if reply is there
+        if replycount > 0:
 
-                # iterate through all reply
-                for reply in item['replies']['comments']:
-                    # Extract reply
-                    reply = reply['snippet']['textDisplay']
+            # iterate through all reply
+            for reply in item['replies']['comments']:
+                # Extract reply
+                reply = reply['snippet']['textDisplay']
 
-                    # Store reply is list
-                    replies.append(reply)
+                # Store reply is list
+                replies.append(reply)
 
-            # print comment with list of reply
-            print(comment, replies, end='\n\n')
+        # print comment with list of reply
+        print(comment, replies, end='\n\n')
 
-            # empty reply list
-            replies = []
-
-        # Again repeat
-        # if 'nextPageToken' in video_response:
-        #     video_response = youtube.commentThreads().list(
-        #         part='snippet,replies',
-        #         videoId=video_id
-        #     ).execute()
-        # else:
-        #     break
+        # empty reply list
+        replies = []
 
 
 # Enter video id
-# video_id = input('Enter Video ID\n')
 video_url = input('Enter Youtube URL\n').split('v=')
 video_id = video_url[1]
 # Call function
-video_comments(video_id)
 print(video_id)
+video_comments(video_id)
