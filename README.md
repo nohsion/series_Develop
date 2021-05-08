@@ -30,3 +30,8 @@ $ npm test
 
 ---
 [수업자료](https://bit.ly/spataD)
+
+* port (컴퓨터 내 어떤 프로그램과 통신할 것인가)
+   * 0~65535 port number
+   * 0~1024 : 국제표준
+   * 27017 : mongoDB
